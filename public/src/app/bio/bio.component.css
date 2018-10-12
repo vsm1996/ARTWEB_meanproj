@@ -1,0 +1,10 @@
+.bio {
+    font-family: Snell Roundhand, cursive;
+    text-align: center;
+    border: 1px solid #B87333;
+    color: #B87333;
+    margin-left: -1.4%;
+    margin-right: -1.4%;
+    padding: 2%;
+    font-size: 20px;
+}

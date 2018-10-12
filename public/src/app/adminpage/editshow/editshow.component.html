@@ -1,0 +1,38 @@
+<div class="box" *ngIf="updatedShow">
+  <div *ngIf="error">
+    <p *ngIf="error.payload.errors.name">{{error.payload.errors.name.message}}</p>
+    <p *ngIf="error.payload.errors.type">{{error.payload.errors.type.message}}</p>
+    <p *ngIf="error.payload.errors.description">{{error.payload.errors.description.message}}</p>
+  </div>
+  <form (submit)="updateShow(updatedShow._id, updatedShow)">
+    <div class="form-group">
+      <label for="title"> Show Title:</label>
+      <input type="text" name="title" id="title" class="form-control" [(ngModel)]="updatedShow.title">
+    </div>
+
+    <div class="form-group">
+      <label for="creator"> Show Creator:</label>
+      <input type="text" name="creator" id="creator" class="form-control" [(ngModel)]="updatedShow.creator">
+    </div>
+
+    <div class="form-group">
+      <label for="location"> Show Location: </label>
+      <input type="text" name="location" class="form-control" id="location" [(ngModel)]="updatedShow.location">
+    </div>
+
+    <div class="form-group">
+      <label for="date"> Show Date: </label>
+      <input type="text" name="date" id="date" class="form-control" [(ngModel)]="updatedShow.showDate">
+    </div>
+
+    <div class="form-group">
+      <label for="image"> Show Image: </label>
+      <input type="text" name="image" id="image" class="form-control" [(ngModel)]="updatedShow.image">
+    </div>
+    <div class="form-group">
+      <label for="link"> Show Link: </label>
+      <input type="text" name="link" id="link" class="form-control" [(ngModel)]="updatedShow.link">
+    </div>
+    <button type="submit" class="button"> Update </button>
+  </form>
+</div>

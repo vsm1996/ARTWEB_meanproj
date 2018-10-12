@@ -1,0 +1,37 @@
+.shows {
+    text-align: center;
+    font-family: Snell Roundhand, cursive;
+    border: 1px solid #B87333;
+    color: #B87333;
+    padding: 2%;
+    margin-left: -1.4%;
+    margin-right: -1.4%;
+}
+
+.h1 {
+    text-align: center;
+}
+
+.box {
+    text-align: center;
+    display: inline-block;
+    border: 1px solid #B87333;
+    padding: 1%;
+}
+.showimage{
+    width: 56%;
+    height: 56%;
+}
+
+.showtext{
+    padding: 2%;
+}
+
+
+.button {
+    background: linear-gradient(rgb(184, 115, 51), rgb(0, 0, 0)); 
+}
+
+.link{
+    color: black;
+}

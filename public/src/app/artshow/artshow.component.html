@@ -1,0 +1,24 @@
+<div class="shows">
+    <p class="h1"> Upcoming Art Shows</p>
+    <div *ngIf="shows">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-4" *ngFor="let show of shows">
+                    <div class="box">
+                        <img class="showimage" src="{{show.image}}">
+                        <div class="showtext">
+                            <h3>{{show.title}}</h3>
+                            <p> Creator: {{show.creator}} </p>
+                            <p> Location {{show.location}} </p>
+                            <button class="button">
+                                <a class="link" href="{{show.link}}"> Read More </a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

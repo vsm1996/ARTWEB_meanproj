@@ -1,0 +1,12 @@
+#box {
+    font-family: Snell Roundhand, cursive;
+    color: #B87333;
+    padding: 1%;
+}
+
+.regsub {
+    margin-bottom: 1%;
+}
+.button {
+    background: linear-gradient(rgb(184, 115, 51), rgb(0, 0, 0)); 
+}

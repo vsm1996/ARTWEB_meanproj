@@ -1,0 +1,44 @@
+<div id="box">
+
+  <h3>REGISTER! </h3>
+  {{regadmin | json}}
+  <form (submit)="reg()">
+    <div class="form-group">
+      <label for="fname">First Name:</label>
+      <input type='text' id='fname' class="form-control" name='first_name' [(ngModel)]="regadmin.first_name">
+    </div>
+
+    <div class="form-group">
+      <label for="lname">Last Name:</label>
+      <input type='text' id='lname' class="form-control" name='last_name' [(ngModel)]="regadmin.last_name">
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type='text' id='email' class="form-control" name='email' [(ngModel)]="regadmin.email">
+    </div>
+
+    <div class="form-group">
+      <label for="pw">Password</label>
+      <input type='password' id='pw' class="form-control" name='password' [(ngModel)]="regadmin.password">
+    </div>
+
+    <button class="button regsub">Submit</button>
+  </form>
+
+  <h3>LOG IN! </h3>
+  <form (submit)="login()">
+    <div class="form-group">
+      <label for="email1">Email: </label>
+      <input type='text' id='email1' class="form-control" name='email' [(ngModel)]="logadmin.email">
+    </div>
+
+    <div class="form-group">
+      <label for="pw1">Password: </label>
+      <input type='password' id='pw1' class="form-control" name='password' [(ngModel)]="logadmin.password">
+    </div>
+
+    <button class="button">Submit</button>
+  </form>
+
+</div>

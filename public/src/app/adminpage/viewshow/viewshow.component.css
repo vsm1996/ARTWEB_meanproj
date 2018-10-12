@@ -1,0 +1,21 @@
+.box {
+    text-align: center;
+    display: inline-block;
+    border: 1px solid #B87333;
+    background-color: rgb(68, 50, 83);
+    width: 75%;
+    height: 75%;
+    padding: 2%;
+}
+
+.showimage{
+    width: 56%;
+    height: 56%;
+}
+
+.showtext{
+    padding: 2%;
+}
+.link{
+    color: black;
+}

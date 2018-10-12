@@ -1,0 +1,25 @@
+
+  <div class="art">
+    <div *ngIf="arts">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-4 artcolumn" *ngFor="let art of arts">
+            <div class="box">
+              <img class="artimage" src="{{art.image}}">
+              <div class="arttext">
+                <h3>{{art.title}}</h3>
+                <p>{{art.dateCreated}}</p>
+                <h4> {{art.size}} </h4>
+                <button class="button" [routerLink]="['view/', art._id]"> View </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+    <router-outlet></router-outlet>
+  </div>

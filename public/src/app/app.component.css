@@ -1,0 +1,47 @@
+.container {
+    background-color: rgb(0, 0, 0);
+}
+
+.button {
+    background: linear-gradient(rgb(184, 115, 51), rgb(0, 0, 0)); 
+}
+
+.h1 {
+    text-align: center;  
+    font-family: Snell Roundhand, cursive;   
+    color: #B87333;
+}
+
+.artwork {
+    font-family: Snell Roundhand, cursive;
+    text-align: center;
+    background-color: rgb(68, 50, 83);
+    color: #B87333;
+    border: 1.5px solid #B87333;
+    margin-left: -4.5%;
+    width: 109%;
+    padding: 2%;
+}
+
+.upcoming {
+    font-family: Snell Roundhand, cursive;
+    text-align: center;
+    background-color: rgb(68, 50, 83);
+    color: #B87333;
+    border: 1.5px solid #B87333;
+    margin-left: -4.5%;
+    width: 109%;
+    padding: 2%;
+    }
+
+.bio {
+    font-family: Snell Roundhand, cursive;
+    text-align: center;
+    background-color: rgb(68, 50, 83);
+    color: #B87333;
+    border: 1.5px solid #B87333;
+    margin-left: -4.5%;
+    width: 109%;
+    padding: 2%;
+}
+

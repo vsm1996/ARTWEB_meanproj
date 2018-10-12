@@ -1,0 +1,188 @@
+<div *ngIf="current[0]">
+  <div id="adminpage">
+    <h1> Welcome {{current[0].first_name}} </h1>
+
+    <div class="container">
+    
+        <div class="row">
+          <div class="col-sm">
+              <form (submit)="addArt()">
+                  <div class="form-group">
+                    <label for="title"> Art Title:</label>
+                    <input 
+                    type="text" 
+                    name="title" 
+                    id="title" 
+                    class="form-control" 
+                    [(ngModel)]="art.title"
+                    >
+                  </div>
+                
+                  <div class="form-group">
+                    <label for="image"> Art Image:</label>
+                    <input 
+                    type="text"
+                    name="image" 
+                    id="image" 
+                    class="form-control"
+                    [(ngModel)]="art.image"
+                    >
+                  </div>
+                
+                  <div class="form-group">
+                    <label for="description"> Art Description: </label>
+                    <input 
+                    type="text" 
+                    name="description" 
+                    class="form-control" 
+                    id="description" 
+                    [(ngModel)]="art.description"
+                    >
+                  </div>
+                
+                  <div class="form-group">
+                    <label for="dateCreated" > Art Creation Date: </label>
+                    <input 
+                    type="text" 
+                    name="dateCreated" 
+                    id="dateCreated" 
+                    class="form-control" 
+                    [(ngModel)]="art.dateCreated"
+                    >
+                    </div>
+                    <div class="form-group">
+                    <label for="size" > Art Size: </label>
+                    <input 
+                    type="text" 
+                    name="size" 
+                    id="size" 
+                    class="form-control" 
+                    [(ngModel)]="art.size"
+                    >
+                  </div>
+                
+                  <button type='submit' class="button">Add Art</button>
+                </form>
+            
+          </div>
+          <div class="col-sm">
+          <form (submit)="addShow()">
+              <div class="form-group">
+                <label for="title"> Show Title:</label>
+                <input 
+                type="text" 
+                name="title" 
+                id="title" 
+                class="form-control" 
+                [(ngModel)]="show.title"
+                >
+              </div>
+            
+              <div class="form-group">
+                <label for="creator"> Show Creator:</label>
+                <input 
+                type="text" 
+                name="creator" 
+                id="creator" 
+                class="form-control" 
+                [(ngModel)]="show.creator"
+                >
+              </div>
+            
+              <div class="form-group">
+                <label for="location"> Show Location: </label>
+                <input 
+                type="text" 
+                name="location" 
+                class="form-control" 
+                id="location" 
+                [(ngModel)]="show.location"
+                >
+              </div>
+            
+              <div class="form-group">
+                <label for="date" > Show Date: </label>
+                <input 
+                type="text" 
+                name="date" 
+                id="date" 
+                class="form-control" 
+                [(ngModel)]="show.showDate"
+                >
+                </div>
+
+                <div class="form-group">
+                  <label for="image" > Show Image: </label>
+                  <input 
+                  type="text" 
+                  name="image" 
+                  id="image" 
+                  class="form-control" 
+                  [(ngModel)]="show.image"
+                  >
+                  </div>
+                  <div class="form-group">
+                      <label for="link" > Show Link: </label>
+                      <input 
+                      type="text" 
+                      name="link" 
+                      id="link" 
+                      class="form-control" 
+                      [(ngModel)]="show.link"
+                      >
+                      </div>
+            
+              <button type='submit' class="button">Add Show</button>
+            </form>
+          </div>
+        </div>
+
+        <div *ngIf="arts">
+          <div class="container">
+      
+            <div class="row">
+              <div class="col-4 artcolumn" *ngFor="let art of arts">
+                <div class="box">
+                  <img class="artimage" src="{{art.image}}">
+                  <div class="arttext">
+                    <h3>{{art.title}}</h3>
+                    <p>{{art.dateCreated}}</p>
+                    <h4> {{art.size}} </h4>
+                    <button class="button" [routerLink]="['art/view/', art._id]"> View </button>
+                    <button class="button" (click)="deleteArt(art._id)"> Delete </button>
+                    <button class="button" [routerLink]="['art/edit/', art._id]">Edit</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+          </div>
+        </div>
+
+        <div *ngIf="shows">
+          <div class="container"> 
+
+            <div class="row">
+              <div class="col-4 showcolumn" *ngFor="let show of shows">
+                <div class="box">
+                  <img class="artimage" src="{{show.image}}">
+                  <div class="arttext">
+                    <h3>{{show.title}}</h3>
+                    <p>{{show.creator}}</p>
+                    <p>{{show.location}}</p>
+                    <button class="button" [routerLink]="['show/view/', show._id]"> View </button>
+                    <button class="button" (click)="deleteShow(show._id)"> Delete </button>
+                    <button class="button" [routerLink]="['show/edit/', show._id]">Edit</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <router-outlet></router-outlet>
+      <button class="button" (click)="logout()"> Logout </button>
+  </div>
+  
+
+</div>

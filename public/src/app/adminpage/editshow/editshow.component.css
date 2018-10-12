@@ -1,0 +1,13 @@
+.box {
+    text-align: center;
+    display: inline-block;
+    border: 1px solid #B87333;
+    background-color: rgb(68, 50, 83);
+    width: 75%;
+    height: 75%;
+    padding: 2%;
+}
+
+.button {
+    background: linear-gradient(rgb(184, 115, 51), rgb(0, 0, 0)); 
+}

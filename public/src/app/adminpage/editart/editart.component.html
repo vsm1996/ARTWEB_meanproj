@@ -1,0 +1,71 @@
+<div class="box" *ngIf="updatedArt">
+  <div *ngIf="error">
+    <p *ngIf="error.payload.errors.name">{{error.payload.errors.name.message}}</p>
+    <p *ngIf="error.payload.errors.type">{{error.payload.errors.type.message}}</p>
+    <p *ngIf="error.payload.errors.description">{{error.payload.errors.description.message}}</p>
+  </div>
+  <form (submit)="updateArt(updatedArt._id, updatedArt)">
+    <div class="form-group">
+      <label for="title"> Title </label>
+      <input 
+      type="text" 
+      name="title" 
+      id="title" 
+      class="form-control" 
+      [(ngModel)]="updatedArt.title"
+      value="updatedArt.title"
+      >
+    </div>
+    <div class="form-group">
+      <label for="image"> Image </label>
+      <input 
+      type="text" 
+      name="image" 
+      id="image" 
+      class="form-control" 
+      [(ngModel)]="updatedArt.image" 
+      value="updatedArt.image"
+      >
+    </div>
+    <div class="form-group">
+      <label for="description"> Description </label>
+      <input 
+      type="text"
+      id="description"
+      name="description"
+      class="form-control"
+      [(ngModel)]="updatedArt.description"
+      value="updatedArt.description"
+      >
+    </div>
+
+    <div class="form-group">
+      <label for="dateCreated"> Date Created: </label>
+      <input 
+      type="text" 
+      name="dateCreated" 
+      id="dateCreated" 
+      class="form-control" 
+      [(ngModel)]="updatedArt.dateCreated" 
+      value="updatedArt.dateCreated"
+      >
+      <label for="size"> Size: </label>
+      <input type="text" 
+      name="size" 
+      id="size" 
+      class="form-control" 
+      [(ngModel)]="updatedArt.size" 
+      value="updatedArt.size"
+      >
+      <label for="sold"> Sold: </label>
+      <input type="text" 
+      name="sold" 
+      id="sold" 
+      class="form-control" 
+      [(ngModel)]="updatedArt.sold" 
+      value="updatedArt.sold"
+      >
+      <button type="submit" class="button"> Update </button>
+    </div>
+  </form>
+</div>

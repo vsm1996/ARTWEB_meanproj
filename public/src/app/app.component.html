@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <p class="h1"> LOTUS ART</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm">
+      <div class="artwork">
+        <h2> Art Work Preview</h2>
+        <p>Preview here</p>
+        <button class="button" [routerLink]="['artwork']"> MORE </button>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="upcoming">
+        <h2>Upcoming Shows</h2>
+        <p>Preview here</p>
+        <button class="button" [routerLink]="['artshow']"> MORE </button>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="bio">
+        <h2>Artist Biography</h2>
+        <p>Preview Here</p>
+        <button class="button" [routerLink]="['bio']"> MORE </button>
+      </div>
+    </div>
+  </div>
+  <div class="row router">
+    <div class="col">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
