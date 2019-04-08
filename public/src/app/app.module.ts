@@ -18,6 +18,7 @@ import { ViewartComponent } from './adminpage/viewart/viewart.component';
 import { ViewartComponent2 } from './artwork/viewart/viewart.component';
 import { ViewshowComponent } from './adminpage/viewshow/viewshow.component';
 import { EditshowComponent } from './adminpage/editshow/editshow.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { EditshowComponent } from './adminpage/editshow/editshow.component';
     ViewartComponent,
     ViewartComponent2,
     ViewshowComponent,
-    EditshowComponent
+    EditshowComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,

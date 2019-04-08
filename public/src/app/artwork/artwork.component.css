@@ -30,3 +30,7 @@
 .button {
     background: linear-gradient(rgb(184, 115, 51), rgb(0, 0, 0)); 
 }
+
+.date {
+    margin-bottom: 1px;
+}

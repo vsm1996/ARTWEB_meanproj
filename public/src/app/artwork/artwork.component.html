@@ -8,9 +8,9 @@
             <div class="box">
               <img class="artimage" src="{{art.image}}">
               <div class="arttext">
-                <h3>{{art.title}}</h3>
-                <p>{{art.dateCreated}}</p>
-                <h4> {{art.size}} </h4>
+                <h4>{{art.title}}</h4>
+                <p class="date">{{art.dateCreated}}</p>
+                <h5> {{art.size}} </h5>
                 <button class="button" [routerLink]="['view/', art._id]"> View </button>
               </div>
             </div>

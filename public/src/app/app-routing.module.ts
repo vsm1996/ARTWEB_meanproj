@@ -12,6 +12,7 @@ import { ViewartComponent } from './adminpage/viewart/viewart.component';
 import { ViewartComponent2 } from './artwork/viewart/viewart.component';
 import { EditshowComponent } from './adminpage/editshow/editshow.component';
 import { ViewshowComponent } from './adminpage/viewshow/viewshow.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 const routes: Routes = [
   {path: 'artwork', component: ArtworkComponent, children: [
@@ -27,7 +28,8 @@ const routes: Routes = [
     { path: 'show/edit/:id', component: EditshowComponent},
     { path: 'show/view/:id', component:ViewshowComponent }
   ]
-  }
+  },
+  {path: 'checkout', component: CheckoutComponent}
 
 ];
 
